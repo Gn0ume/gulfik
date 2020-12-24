@@ -1,0 +1,10 @@
+<div id="clean-field">
+  <app-stain
+    [ngStyle]="{'top.%': stainCoordinates.x, 'left.%': stainCoordinates.y, opacity: stainCoordinates && showStain ? 1 : 0}"
+    [coordinates]="stainCoordinates"
+    [stainHealth]="stainHealth"
+    (stainDisplacedEvent)="stainIsDisplaced.emit($event)"
+  >
+  </app-stain>
+</div>
+

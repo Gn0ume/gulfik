@@ -1,0 +1,24 @@
+<div class="screen">
+  <div class="gsm">
+    <img src="assets/images/signal.svg">
+    <span>BeLion</span>
+  </div>
+  <div class="time">06:59</div>
+  <div id="notifications">
+    <div class="notification" [ngClass]="{'received': animationSteps.notification1}">
+      <div class="sender">{{text.boss}}</div>
+      <img src="assets/images/avatar.png">
+      <span class="notification-text">{{text.n1}}</span>
+      <span class="notification-time">06:59</span>
+    </div>
+
+    <div class="notification" [ngClass]="{'received': animationSteps.notification2}">
+      <div class="sender">{{text.boss}}</div>
+      <img src="assets/images/avatar.png">
+      <span class="notification-text">{{text.n2}}
+        <br> <button (click)="startGame.emit()">Start Cleaning</button>
+      </span>
+      <span class="notification-time">06:59</span>
+    </div>
+  </div>
+</div>

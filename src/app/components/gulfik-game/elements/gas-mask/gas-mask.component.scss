@@ -1,0 +1,30 @@
+:host{
+  position: absolute;
+  top: -105vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background-image: url("../../../../../assets/images/gas-mask.svg");
+  background-position: center;
+  background-size: auto 100%;
+  animation: breathing-animation 2s infinite;
+  filter: blur(2px);
+  transition: top 300ms linear;
+
+  &.on {
+    top: 0;
+  }
+}
+
+@keyframes breathing-animation {
+  0% {
+    background-size: auto 100%;
+  }
+  50% {
+    background-size: auto 102%;
+  }
+  100% {
+    background-size: auto 100%;
+  }
+}

@@ -1,0 +1,14 @@
+:host{
+  position: absolute;
+}
+.stain {
+  display: block;
+  position: absolute;
+}
+.stain > img {
+  position: relative;
+  top: -4rem;
+  left: -4rem;
+  width: 8rem;
+  height: 8rem;
+}

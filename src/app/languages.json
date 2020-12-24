@@ -1,0 +1,14 @@
+{
+  "english": {
+    "notification1": "Comrad!\nMy money are in danger!",
+    "notification2": "I mean Mother Russia is in danger! Therefore it's time to wash some underwear!",
+    "boss": "Boss",
+    "game_over": "☠️ It is an honor to go to haven for me, son!"
+  },
+  "russian": {
+    "notification1": "Капитан!\nМои деньги в опасности!",
+    "notification2": "...то есть Россия в опасности! Начинайте операцию 'Чистый гульфик'!",
+    "boss": "Босс",
+    "game_over": "☠️ Отправиться в рай - честь для настоящего офицера!"
+  }
+}

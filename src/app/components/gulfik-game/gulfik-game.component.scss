@@ -1,0 +1,44 @@
+:host{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.container{
+  background-image: url("../../../assets/images/desk.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  background-position-y: 30%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: filter 10s linear;
+  &.poisoned{
+    filter: invert(54%) sepia(7%) saturate(1000%) hue-rotate(82deg) brightness(121%) contrast(121%) blur(8px);
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  :host {
+    background-size: auto 150%;
+  }
+}
+@media only screen and (orientation: landscape) {
+  :host {
+    background-size: 150% auto;
+  }
+}
+
+#tool{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 170;
+}

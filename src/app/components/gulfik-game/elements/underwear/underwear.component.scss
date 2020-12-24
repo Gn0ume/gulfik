@@ -1,0 +1,37 @@
+:host{
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100vw;
+  z-index: 150;
+}
+#clean-field{
+  background-image: url("../../../../../assets/images/boxers.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  position: relative;
+}
+$topPortraitOffset: 14rem;
+$topLandscapeOffset: 3rem;
+@media only screen and (orientation: portrait) {
+  #clean-field {
+    background-size: 100% auto;
+    width: 100vw;
+    height: 100vw;
+  }
+  :host{
+    top: $topPortraitOffset;
+  }
+}
+@media only screen and (orientation: landscape) {
+  #clean-field {
+    background-size: auto 100%;
+    width: calc(100vh - #{$topLandscapeOffset});
+    height: calc(100vh - #{$topLandscapeOffset});
+  }
+  :host{
+    top: $topLandscapeOffset;
+  }
+}

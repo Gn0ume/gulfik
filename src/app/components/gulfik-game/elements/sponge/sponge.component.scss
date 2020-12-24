@@ -1,0 +1,14 @@
+$detector-width: 7rem;
+:host{
+  width: $detector-width;
+  position: relative;
+  top: -5rem;
+  left: -50%;
+  display: block;
+  transform: rotate(15deg);
+
+  img {
+    width: 100%;
+    box-shadow: 8rem 4rem 1rem rgba(0, 0, 0, 0.5);
+  }
+}

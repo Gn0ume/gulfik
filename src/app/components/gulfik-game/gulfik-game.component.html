@@ -1,0 +1,39 @@
+<!--<app-lives [lives]="lives"></app-lives>-->
+<div class="container" #container>
+  <app-timer
+    *ngIf="roundTime"
+    [time]="roundTime"
+  ></app-timer>
+  <app-switcher
+    *ngIf="roundTime"
+    [handModeValue]="toolMode"
+  ></app-switcher>
+  <app-underwear
+    [stainCoordinates]="stainCoordinates"
+    (stainIsDisplaced)="onStainDisplaced($event)"
+    [stainHealth]="stainHealth"
+    [showStain]="showStain"
+    *ngIf="!showMobileDevice"
+  >
+  </app-underwear>
+  <app-gas-mask [ngClass]="{'on':showStain}"></app-gas-mask>
+  <app-mobile-device
+    *ngIf="showMobileDevice"
+    (startGame)="startGame()"
+  ></app-mobile-device>
+  <ng-template></ng-template>
+  <div
+    id="tool"
+    *ngIf="!showMobileDevice"
+    [ngStyle]="{'top.px': handAbsoluteCoordinates.y, 'left.px': handAbsoluteCoordinates.x}"
+  >
+    <app-detector
+      *ngIf="!showStain"
+      [distance]="stainToToolDistance"
+    >
+    </app-detector>
+    <app-sponge *ngIf="showStain"></app-sponge>
+  </div>
+</div>
+<app-game-over *ngIf="gameIsOver"></app-game-over>
+

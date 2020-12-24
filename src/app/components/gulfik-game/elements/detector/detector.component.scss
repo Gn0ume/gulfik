@@ -1,0 +1,40 @@
+$detector-width: 7rem;
+:host{
+  width: $detector-width;
+  position: relative;
+  top: -5rem;
+  left: -50%;
+  display: block;
+  transform: rotate(15deg);
+
+  img {
+    width: 100%;
+    box-shadow: 8rem 4rem 1rem rgba(0, 0, 0, 0.5);
+  }
+
+  .indicator {
+    display: none;
+    position: absolute;
+    top: 4.6rem;
+    left: 3rem;
+    width: 1rem;
+    height: 1rem;
+    box-shadow: 0 0 0.2rem 0.4rem rgba(0,255,0,.7);
+    background-color: #04da04;
+    border-radius: .5rem;
+  }
+
+  .indicator.on{
+    display: block;
+  }
+
+  .intensity1 {
+    animation-duration: 100ms;
+  }
+}
+
+@keyframes blink-indicator {
+  50% {
+    display: none;
+  }
+}

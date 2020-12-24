@@ -1,0 +1,92 @@
+$phone-width: 30rem;
+$top-offset: -6rem;
+:host{
+  display: block;
+  position: absolute;
+  top: $top-offset;
+  left: calc(50% - #{$phone-width} / 2);
+  background-image: url("../../../../../assets/images/phone.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: $phone-width;
+  height: calc(100vh -  #{$top-offset});
+  z-index: 250;
+}
+
+$screen-left-offset: 4rem;
+$screen-top-offset: 11rem;
+
+.screen {
+  position: absolute;
+  top: $screen-top-offset;
+  left: $screen-left-offset;
+  height: calc(100% - #{$screen-top-offset});
+  width: calc(100% - 2 * #{$screen-left-offset});
+  color: black;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  background-image: url("../../../../../assets/images/putin-wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: 150% auto;
+  padding-top: 3rem;
+}
+.time {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.gsm {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  img {
+    width: 1rem;
+    padding-right: .3rem;
+  }
+}
+#notifications {
+  .notification {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background: mintcream;
+    border: 1px solid gray;
+    border-radius: .5rem;
+    margin-top: 1.5rem;
+    top: 100vh;
+
+    &.received{
+      top: 0;
+      transition: top 400ms cubic-bezier(0, 0, 0.43, 1.21);
+    }
+
+    img {
+      width: 6rem;
+    }
+
+    .notification-text{
+      padding: .3rem;
+      width: 100%;
+    }
+
+    .notification-time {
+      color: gray;
+      font-size: .6rem;
+      padding: .3rem;
+    }
+
+    .sender{
+      position: absolute;
+      top: -1.3rem;
+      left: 0;
+      color: black;
+      font-weight: bolder;
+    }
+  }
+}
