@@ -15,7 +15,7 @@ export class SwitcherComponent implements OnInit, OnChanges {
     this.handMode = this.handModeValue === EHandMode.Sponge;
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.handMode = this.handModeValue === EHandMode.Sponge;
   }
 

@@ -1,5 +1,4 @@
-import {Component, OnInit, OnChanges, Input, SimpleChanges} from '@angular/core';
-import {templateRefExtractor} from '@angular/core/src/render3';
+import {Component, OnInit, OnChanges, Input} from '@angular/core';
 
 @Component({
   selector: 'app-detector',
@@ -21,7 +20,7 @@ export class DetectorComponent implements OnInit, OnChanges {
     this.checkBeeping();
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.checkBeeping();
   }
 

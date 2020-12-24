@@ -19,7 +19,7 @@ export class MobileDeviceComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe( params => this.language = params.language );
-    const language = languages.default[this.language];
+    const language = languages[this.language];
     this.text = {
       n1: language.notification1,
       n2: language.notification2,

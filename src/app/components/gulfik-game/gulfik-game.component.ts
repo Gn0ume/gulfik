@@ -33,6 +33,7 @@ export class GulfikGameComponent implements OnInit, OnChanges {
   round: number;
   poisonTime = 10;
   gameIsOver: boolean;
+  showGasMask: boolean;
 
 
   constructor(private router: Router) {

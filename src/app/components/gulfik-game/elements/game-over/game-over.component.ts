@@ -15,7 +15,7 @@ export class GameOverComponent implements OnInit {
   finalText: string;
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe( params => this.language = params.language );
-    this.finalText = languages.default[this.language].game_over;
+    this.finalText = languages[this.language].game_over;
   }
 
   ngOnInit() {
