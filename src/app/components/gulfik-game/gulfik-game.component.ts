@@ -90,6 +90,7 @@ export class GulfikGameComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
+    document.body.requestFullscreen();
     this.gameState = EGameStates.Started;
     this.handCoordinates = {
       x: 50,
